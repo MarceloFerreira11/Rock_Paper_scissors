@@ -34,11 +34,12 @@ function playRound(playerSelection,computerSelection) {
 }
 //new function called game() to play 5 round game that keeps score and reports a winner
  function game() {
+   
     let playerScore = 0;
     let computerScore = 0; 
     let message=''
     for (let i=1; i<=5;i++) {
-        
+        computerSelection = getComputerChoice();
         let playerSelection = prompt(`Round ${i}: Rock, Paper or Scissors?`);
         let roundResult = playRound(playerSelection,computerSelection);
         
@@ -59,4 +60,3 @@ function playRound(playerSelection,computerSelection) {
           \n${message}`;
  }
           console.log(game())
-
